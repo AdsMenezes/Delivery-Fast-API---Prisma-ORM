@@ -1,0 +1,334 @@
+_type: export
+__export_format: 4
+__export_date: 2022-01-05T01:50:24.909Z
+__export_source: insomnia.desktop.app:v2021.7.2
+resources:
+  - _id: req_0538845173d241248bb6233df97f19f1
+    parentId: fld_0c183ab67c6b49ad884df6d3dcbba054
+    modified: 1641340985529
+    created: 1641340214053
+    url: "{{ _.baseURL }}/deliveryman"
+    name: Create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "Bruno",
+        	"password": "bruno123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_bafa71442fd64c788588e62106cf78b5
+    authentication: {}
+    metaSortKey: -1641286695434
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0c183ab67c6b49ad884df6d3dcbba054
+    parentId: wrk_61f449353bc24a23856682cee14beb5c
+    modified: 1641340209133
+    created: 1641340209133
+    name: Deliveryman
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1641340209134
+    _type: request_group
+  - _id: wrk_61f449353bc24a23856682cee14beb5c
+    parentId: null
+    modified: 1641233593628
+    created: 1641233593628
+    name: Ignite
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_5a2bee5038ad4c358ec1ad620b8ab82f
+    parentId: fld_0c183ab67c6b49ad884df6d3dcbba054
+    modified: 1641341018274
+    created: 1641340256913
+    url: "{{ _.baseURL }}/deliveryman/session"
+    name: Session
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "Bruno",
+        	"password": "bruno123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_122770e2aa2c44d6b0e62e8f7aca9d85
+    authentication: {}
+    metaSortKey: -1641286695384
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4ddfd92d00e7441c945226658274b234
+    parentId: fld_0c183ab67c6b49ad884df6d3dcbba054
+    modified: 1641341159855
+    created: 1641340279452
+    url: "{{ _.baseURL }}/deliveryman/deliveries"
+    name: Get my deliveries
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.tokenDeliveryman }}"
+    metaSortKey: -1641286695334
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1033720de0ea453094350961f54e9fd3
+    parentId: fld_0c183ab67c6b49ad884df6d3dcbba054
+    modified: 1641341166314
+    created: 1641340503406
+    url: "{{ _.baseURL }}/deliveries/available"
+    name: Deliveries available
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.tokenDeliveryman }}"
+    metaSortKey: -1641286695309
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_97d5589678e9438bb7e55b7e2457b825
+    parentId: fld_0c183ab67c6b49ad884df6d3dcbba054
+    modified: 1641341138885
+    created: 1641340405067
+    url: "{{ _.baseURL
+      }}/deliveries/updateDeliveryman/3b50ed3e-9049-4c77-ba45-4a44d1159e0c"
+    name: Accept delivery
+    description: ""
+    method: PUT
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.tokenDeliveryman }}"
+    metaSortKey: -1641286695284
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d088dcac9cda457ba9b89d31dcead1cc
+    parentId: fld_0c183ab67c6b49ad884df6d3dcbba054
+    modified: 1641341146037
+    created: 1641340441857
+    url: "{{ _.baseURL
+      }}/deliveries/updateEndDate/3b50ed3e-9049-4c77-ba45-4a44d1159e0c"
+    name: Finish delivery
+    description: ""
+    method: PUT
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.tokenDeliveryman }}"
+    metaSortKey: -1641286695234
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_93ee6c48772a461a9c47e69e7ed534c4
+    parentId: fld_a0434dbe7f974cc4be74e1e8dee2dfe9
+    modified: 1641340834541
+    created: 1641233637885
+    url: "{{ _.baseURL }}/clients"
+    name: Create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "Anderson",
+        	"password": "anderson123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_bafa71442fd64c788588e62106cf78b5
+    authentication: {}
+    metaSortKey: -1641286695459
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_a0434dbe7f974cc4be74e1e8dee2dfe9
+    parentId: wrk_61f449353bc24a23856682cee14beb5c
+    modified: 1641339753033
+    created: 1641339753033
+    name: Client
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1641339753033
+    _type: request_group
+  - _id: req_51d952b58a334adfb91f6d7ea49666e9
+    parentId: fld_a0434dbe7f974cc4be74e1e8dee2dfe9
+    modified: 1641340891534
+    created: 1641339786462
+    url: "{{ _.baseURL }}/clients/session"
+    name: Session
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "Anderson",
+        	"password": "anderson123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_122770e2aa2c44d6b0e62e8f7aca9d85
+    authentication: {}
+    metaSortKey: -1641286695409
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f44635aaeafa432bb5eaa04319e7e48b
+    parentId: fld_a0434dbe7f974cc4be74e1e8dee2dfe9
+    modified: 1641341173376
+    created: 1641340060472
+    url: "{{ _.baseURL }}/deliveries"
+    name: Create delivery
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"item_name": "Monitor AOC 24 / 144hz"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_3eb17f5ebe01446fbdc4711c5c11a860
+    authentication:
+      type: bearer
+      token: "{{ _.tokenClient }}"
+    metaSortKey: -1641286695309
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_802d08be1ac54cd5b7b5eda24db2cf0a
+    parentId: fld_a0434dbe7f974cc4be74e1e8dee2dfe9
+    modified: 1641347372831
+    created: 1641339903523
+    url: "{{ _.baseURL }}/clients/deliveries"
+    name: Get my deliveries
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.tokenClient }}"
+    metaSortKey: -1641286695259
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_058512c25d2b1ad64878e48621d6c5a90eda6525
+    parentId: wrk_61f449353bc24a23856682cee14beb5c
+    modified: 1641341018103
+    created: 1641233593632
+    name: Base Environment
+    data:
+      baseURL: http://localhost:3333
+      tokenClient: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDEzNDA4ODEsImV4cCI6MTY0MTQyNzI4MSwic3ViIjoiZWVhZjkzMGMtOWY4Yy00MDcyLTgyZGYtNDg4ZGVhZjdkZGQ3In0.YzBBVqhWFX3tiz7Ny692KInkTXc0MnpV6ioTx_Qxo68
+      tokenDeliveryman: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDEzNDEwMTAsImV4cCI6MTY0MTQyNzQxMCwic3ViIjoiMzVlMjQwYjEtNTgxOS00OGZlLWEzNmUtNTZkMmU4ZmU0MTEwIn0.8kbGICA9sgCtTdwtTyNbqXe_2Jxq0HdYex-Jm6Lb6iY
+    dataPropertyOrder:
+      "&":
+        - baseURL
+        - tokenClient
+        - tokenDeliveryman
+    color: null
+    isPrivate: false
+    metaSortKey: 1641233593632
+    _type: environment
+  - _id: jar_058512c25d2b1ad64878e48621d6c5a90eda6525
+    parentId: wrk_61f449353bc24a23856682cee14beb5c
+    modified: 1641233593633
+    created: 1641233593633
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_a2155790643d4c1a9996b096ad01c025
+    parentId: wrk_61f449353bc24a23856682cee14beb5c
+    modified: 1641347359846
+    created: 1641233593629
+    fileName: Delivery Fast
+    contents: ""
+    contentType: yaml
+    _type: api_spec
